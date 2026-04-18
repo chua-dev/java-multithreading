@@ -5,6 +5,25 @@ public class Main {
     public static void main(String[] args) throws InterruptedException, ExecutionException {
         System.out.println("Hello world!");
 
+        if (true) {
+
+            int[] questionOne = {5, 5, 1, 9, 7, 10, 7, 7, 11, 1, 8, 5};
+            int[] questionTwo = {1, -1, 6, -2, 7};
+            int[] answerOne = ArrayProblem.sumOfTwoInArray(questionOne, 6);
+            System.out.println(Arrays.toString(answerOne));
+            System.out.println(ArrayProblem.duplicateInArray(questionOne));
+            System.out.println(ArrayProblem.maximumSubArray(questionTwo));
+            return;
+        }
+
+        if (true) {
+            String[] myList = {"129394", "120", "1294", "12345", "123"};
+
+            String myAns = CommonPrefix.longestCommonPrefix(myList);
+            System.out.println(myAns);
+            return;
+        }
+
         // New ArrayList
         CopyOnWriteArrayList<String> list = new CopyOnWriteArrayList<>(Arrays.asList("default", "default2"));
         ConcurrentHashMap<String, Integer> concurrentHashMap = new ConcurrentHashMap<>();
@@ -19,13 +38,13 @@ public class Main {
         thread.start();
         //thread.run(); // run still run at the same thread
 
+        // Thread function
         thread.setName("My First Thread");
         thread.getName();
         Thread.currentThread();
         Thread.sleep(100); // millisecond
         thread.setPriority(1);
         thread.getPriority();
-
 
         // Runnable
         MyRunnable runnable = new MyRunnable(list, concurrentHashMap);
